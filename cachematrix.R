@@ -1,3 +1,7 @@
+## set the input x as a matrix
+## then set the solved value "inv" as a null
+## then changed every reference to "solve"
+
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y) {
@@ -12,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
              setInverse = setInverse,
              getInverse = getInverse)
 }
-
+## changed every reference to "solve"
 cacheSolve <- function(x, ...) {
         inv <- x$getInverse()
         if (!is.null(inv)) {
